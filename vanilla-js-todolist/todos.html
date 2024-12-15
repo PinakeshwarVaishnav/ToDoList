@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>My TODOs</title>
 
-		<script type="module" src="todos.js"></script>
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<title>My TODOs</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+	<script type="module" src="todos.js"></script>
+</head>
 
-	<body>
-		<h1>My TODOs</h1>
+<body>
+	<div class="flex flex-col items-center justify-center h-screen bg-gray-100">
+		<h1 class="text-3xl font-bold mb-6">My TODOs</h1>
+		<label for="todo-input" class="mb-2 text-lg">New TODO</label>
+		<input type="text" id="todo-input" class="border border-gray-300 rounded p-2 mb-4 wb-64" />
+		<button id="add-todo-btn"
+			class="transition duration-300 ease-in-out bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+			disabled>Add</button>
+	</div>
 
-<div>
-<label for="todo-input">New TODO</label>
-<input type="text" id="todo-input" />
-<button id="add-todo-btn" disabled>Add</button>
-</div>
+	<ul id="todos-list"></ul>
+</body>
 
-		<ul id="todos-list"></ul>
-	</body>
 </html>
